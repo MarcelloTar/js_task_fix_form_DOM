@@ -2,13 +2,13 @@
 
 // write code here
 
-const inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('form input');
 
 inputs.forEach((input) => {
   const attName = input.name;
   const label = document.createElement('label');
 
-  label.htmlFor = attName;
+  label.htmlFor = input.id;
   label.textContent = attName;
   label.classList.add('field-label');
 
