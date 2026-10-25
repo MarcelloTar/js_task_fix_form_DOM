@@ -2,7 +2,7 @@
 
 // write code here
 
-const inputs = document.querySelector('form').querySelectorAll('input');
+const inputs = document.querySelectorAll('form input');
 
 inputs.forEach((input) => {
   const attName = input.name;
@@ -12,7 +12,7 @@ inputs.forEach((input) => {
   label.textContent = attName;
   label.classList.add('field-label');
 
-  input.insertAdjacentElement('beforebegin', label);
+  input.parentElement.appendChild(label);
 
   input.placeholder = attName[0].toLocaleUpperCase() + attName.slice(1);
 });
