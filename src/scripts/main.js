@@ -2,7 +2,7 @@
 
 // write code here
 
-const inputs = document.querySelectorAll('form input');
+const inputs = document.querySelector('form').querySelectorAll('input');
 
 inputs.forEach((input) => {
   const attName = input.name;
